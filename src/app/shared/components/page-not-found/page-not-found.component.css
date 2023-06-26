@@ -1,0 +1,60 @@
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  font-size: 6em;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 1em;
+}
+
+p {
+  margin-top: 1em;
+  font-size: 1.2em;
+}
+
+button {
+  margin-top: 2em;
+  padding: 1em 2em;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #3f51b5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilos para dispositivos con pantalla hasta 600px de ancho */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  button {
+    padding: 0.8em 1.6em;
+    font-size: 0.9em;
+  }
+}

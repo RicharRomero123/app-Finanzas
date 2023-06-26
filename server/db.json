@@ -1,0 +1,51 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "Johan Julian",
+      "lastName": "Huanca Nina",
+      "photoUrl": "https://s3.getstickerpack.com/storage/uploads/sticker-pack/menhera-chan-3-1/sticker_28.png?0fce8e4c13ea0763f40b8d577fd192f3",
+      "userName": "ワンカ",
+      "email": "j.huanca4141@gmail.com",
+      "password": "@rduino4141!",
+      "phone": 995240514
+    },
+    {
+      "firstName": "Jhon smith",
+      "lastName": "Peralta Ayala",
+      "photoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRU-iSO5kd5Qk7acXeacucLuhcCTjXiu3SU1fM57yGfKNovY-fhSy4A7NweQmsBVx6oLcU&usqp=CAU",
+      "userName": "AlgelGamer",
+      "email": "jhonsmith2014@gmail.com",
+      "phone": "666666666",
+      "password": "ragnack1234",
+      "id": 2
+    },
+    {
+      "firstName": "Takehiko",
+      "lastName": "Inoue",
+      "photoUrl": "https://i0.wp.com/www.coyotemag.fr/wp-content/uploads/2018/04/TAKEHIKO-INOUE-02.jpg",
+      "userName": "EscritoNice",
+      "email": "tak@mail.com",
+      "phone": "12312423",
+      "password": "password",
+      "id": 3
+    }
+  ],
+  "loans": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Casa de Playa",
+      "currency": "S/",
+      "amount": 5000,
+      "initialPayment": 1000,
+      "timeFormat": "Años",
+      "time": 1,
+      "interestRateType": "Nominal",
+      "rate": 0.09,
+      "totalGracePeriod": 3,
+      "partialGracePeriod": 3,
+      "futureValue": 6000
+    }
+  ]
+}

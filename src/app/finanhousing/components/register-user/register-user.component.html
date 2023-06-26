@@ -1,0 +1,32 @@
+<app-toolbar></app-toolbar>
+<div class="register-container">
+  <h2>Register in Finan-Housing</h2>
+  <form class="register-form" (submit)="onSubmit()" #userForm="ngForm">
+    <mat-form-field class="form-group">
+      <input matInput placeholder="FirstName" name="firstName" required [(ngModel)]="userData.firstName">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="LastName" name="lastName" required [(ngModel)]="userData.lastName">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="PhotoUrl" name="photoUrl" required [(ngModel)]="userData.photoUrl">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="UserName" name="userName" required [(ngModel)]="userData.userName">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Email" name="email" required [(ngModel)]="userData.email">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Password" name="password" required [(ngModel)]="password[0]" type="password">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Confirm Password" name="confirmPassword" required [(ngModel)]="password[1]" type="password">
+    </mat-form-field>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Number Phone" name="phone" required [(ngModel)]="userData.phone">
+    </mat-form-field>
+    <button type="submit" class="save-button">Save</button>
+    <button class="cancel-button" (click)="navigateToHome()">Cancel</button>
+  </form>
+</div>

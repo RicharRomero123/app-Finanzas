@@ -1,0 +1,53 @@
+<app-toolbar></app-toolbar>
+<div class="register-container">
+  <h2>Register Data</h2>
+  <form class="register-form" (submit)="onSubmit()" #calculatorForm="ngForm">
+    <p>Nombre de Tabla:</p>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Name" name="name" required [(ngModel)]="loanData.name">
+    </mat-form-field>
+    <p>Moneda (S/ o $):</p>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Currency" name="currency" required [(ngModel)]="loanData.currency">
+    </mat-form-field>
+    <p>Monto del préstamo:</p>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Amount" name="amount" required [(ngModel)]="loanData.amount" type="number">
+    </mat-form-field>
+    <p>Pago inicial:</p>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Initial Payment" name="initialPayment" required [(ngModel)]="loanData.initialPayment" type="number">
+    </mat-form-field>
+    <p>Tiempo en el que quiere trabajarlo ("Dias","Meses","Años"):</p>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Time Format" name="timeformat" required [(ngModel)]="loanData.timeFormat">
+    </mat-form-field>
+    <p>Cantidad de tiempo en los plazos preestablecidos:</p>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Time" name="time" required [(ngModel)]="loanData.time" type="number">
+    </mat-form-field>
+    <p>Tipo de tasa de interés (Nominal o Efectiva):</p>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Interest Rate Type" name="interestRateType" required [(ngModel)]="loanData.interestRateType">
+    </mat-form-field>
+    <p>Tasa de préstamo del tipo preestablecido:</p>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Rate" name="rate" required [(ngModel)]="loanData.rate" type="number">
+    </mat-form-field>
+    <p>Período de gracia total:</p>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Total Grace Period" name="totalGracePeriod" required [(ngModel)]="loanData.totalGracePeriod" type="number">
+    </mat-form-field>
+    <p>Período de gracia parcial:</p>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Partial Grace Period" name="partialGracePeriod" required [(ngModel)]="loanData.partialGracePeriod" type="number">
+    </mat-form-field>
+    <p>Valor Futura para el calculo de VAN y TIR:</p>
+    <mat-form-field class="form-group">
+      <input matInput placeholder="Future Value" name="futureValue" required [(ngModel)]="loanData.futureValue" type="number">
+    </mat-form-field>
+
+    <button type="submit" class="save-button">Save</button>
+    <button class="cancel-button" (click)="navigateToHome()">Cancel</button>
+    </form>
+</div>

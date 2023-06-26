@@ -1,0 +1,25 @@
+<app-toolbar></app-toolbar>
+<div class="card-container">
+  <div class="card">
+    <div class="left-section">
+      <h3>Create Account</h3>
+      <p>Register to UJOBS and become a professional now.</p>
+      <button class="register-button" routerLink="/register">Register Now</button>
+    </div>
+    <div class="right-section">
+      <h2>Welcome Back</h2>
+
+      <form class="login-form" (submit)="login()">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" [(ngModel)]="email">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="Enter your password" [(ngModel)]="password">
+        </div>
+        <button type="submit" class="sign-in-button">Sign In</button>
+      </form>
+    </div>
+  </div>
+</div>
