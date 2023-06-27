@@ -1,136 +1,145 @@
-.card-container {
+.bg-container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right top, #051937, #008793, #00bf72, #a8eb12);
+  display: grid;
+  animation: waterEffect 10s ease-in-out infinite;
+
+}
+@keyframes waterEffect {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.form-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #14162E;
-
+  width: 100%;
+  padding: 3rem 0;
+  justify-self: center;
+  align-self: center;
 }
 
-.card {
+mat-card {
   display: flex;
-  background-color: #FFFFFF;
-  border-radius: 90px;
-  overflow: hidden;
-  width: 700px; /* Cambiar el valor según tus preferencias */
-  height: 500px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-top: 50px;
-}
-.left-section {
-  flex: 1;
-  background-color: #357488;
-  padding: 40px;
-
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  max-width: 30rem;
+  margin: 0 1rem;
+  padding: 2rem 0;
+  border-radius:20px;
+  background: rgba(200, 191, 232, 0.29);
 }
 
-.left-section h2, .left-section p {
-  color: #FFFFFF;
+mat-card-header {
+  flex-direction: column;
 }
-
-.right-section {
-  flex: 1;
-  padding: 40px;
-
-}
-
-.right-section h2 {
-  color: #000000;
-
-}
-
-.right-section form {
-  color: #000000;
-
-
-}
-
-.right-section label {
-  color: #000000;
+mat-card-title{
+  font-size: 3rem;
+  line-height: 1;
+  font-family: "Segoe UI",Arial,sans-serif;
   font-weight: bold;
+  color: #faf8f8;
 }
 
-.right-section input[type="email"],
-.right-section input[type="password"] {
-  background-color: #FFFFFF;
-  color: #000000;
-  border: none;
-  padding: 8px;
-  margin-bottom: 10px;
+.logo-container mat-card-title {
+  margin-left: 1rem;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-
+  margin-bottom: 2rem;
 }
 
-.right-section button {
-  background-color: #FFFFFF;
-  color: #000000;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
+.logo-container img {
+  width: 6rem;
+  border-radius: 9999px;
+}
+
+.logo-container mat-card-title {
+  margin-left: 1rem;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+mat-card-content {
+  margin: 0 2rem;
+}
+
+mat-card-content form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+mat-card-content form button[type=submit] {
+  background: rgb(47, 153, 47);
+  margin-top: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(53, 53, 53);
+  margin: 1rem 0;
+  padding: .25rem;
+  border-radius: 6px;
+}
+a {
+  color: white !important;
+  text-decoration: none;
+  padding: .5rem;
+  border-radius: 6px;
+}
+
+.btn-container a {
   width: 100%;
-
 }
 
-.separator {
-  text-align: center;
-  margin: 10px 0;
-  color: #000000;
-
-}
-
-.google-button {
-  background-color: #FFFFFF;
-  color: #000000;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  width: 100%;
-}
-h2{
-  font-weight: bold;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  color: #1E1E1E;
-
-}
-.login-form input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-.card h3 {
-  margin-top: 100px;
-  font-weight: 700;
-  font-size: 35px;
-  line-height: 58px;
-  text-align: center;
-  color: #FFFFFF;
-  opacity: 0.64;
-
-}
-
-.card p {
-  text-align: center;
-  color: #FFFFFF;
-  opacity: 0.64;
-  font-style: normal;
-  font-weight: normal;
-
-}
-
-
-.register-button {
-  margin-top: 20px; /* Ajusta el margen superior según tus preferencias */
-  background-color: #46A2AE;
+.btn-container a.active {
+  background: rgb(47, 153, 47);
   color: white;
-  border: none;
-  padding: 10px 20px;
-  width: 100%;
-  border-radius: 40px;
-  font-size: 17px;
+
+}
+
+.btn-container > * + * {
+  margin-left: .25rem;
+}
+button[type="submit"] {
+  color: #ffffff;
   font-weight: bold;
-  cursor: pointer;
+}
+
+
+@media (max-width: 599.98px) {
+  mat-card {
+    padding: 1rem 0;
+  }
+
+  mat-card-content {
+    margin: 1rem;
+  }
+
+  .logo-container {
+    flex-direction: column;
+  }
+
+  .logo-container mat-card-title {
+    margin-top: 1rem;
+    margin-left: 0;
+    font-size: 2.5rem;
+  }
 }

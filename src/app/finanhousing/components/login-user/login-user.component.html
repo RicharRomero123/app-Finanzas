@@ -1,25 +1,34 @@
-<app-toolbar></app-toolbar>
-<div class="card-container">
-  <div class="card">
-    <div class="left-section">
-      <h3>Create Account</h3>
-      <p>Register to UJOBS and become a professional now.</p>
-      <button class="register-button" routerLink="/register">Register Now</button>
-    </div>
-    <div class="right-section">
-      <h2>Welcome Back</h2>
+<div class="bg-container">
+  <div class="form-container">
+    <mat-card>
+      <mat-card-header>
+        <div class="logo-container">
+          <img class="logo" src="/assets/logo.png" alt="logo">
+          <mat-card-title>FinanHouse</mat-card-title>
+        </div>
+      </mat-card-header>
 
-      <form class="login-form" (submit)="login()">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="Enter your email" [(ngModel)]="email">
+      <mat-card-content>
+        <div class="btn-container">
+          <a mat-flat-button color="basic" routerLink="/accounts/login" routerLinkActive="active" type="button">
+            Log in
+          </a>
+          <a mat-flat-button color="basic" routerLink="/accounts/register" routerLinkActive="active" type="button">
+            Sign up
+          </a>
         </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" placeholder="Enter your password" [(ngModel)]="password">
-        </div>
-        <button type="submit" class="sign-in-button">Sign In</button>
-      </form>
-    </div>
+        <form>
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" id="email"  name= "email" [(ngModel)]="email" spellcheck="false" required>
+          </mat-form-field>
+          <mat-form-field appearance="fill">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" id="password" name="password" [(ngModel)]="password" spellcheck="false" required>
+          </mat-form-field>
+          <button mat-flat-button color="basic" type="submit" (click)="login()">Submit</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
   </div>
 </div>

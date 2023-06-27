@@ -46,6 +46,54 @@
       "totalGracePeriod": 3,
       "partialGracePeriod": 3,
       "futureValue": 6000
+    },
+    {
+      "name": "Departamento Miraflores",
+      "currency": "S/",
+      "amount": 1234556,
+      "initialPayment": 21223,
+      "timeFormat": "10,10,2030",
+      "time": 10,
+      "interestRateType": "8",
+      "rate": 3,
+      "totalGracePeriod": 12,
+      "partialGracePeriod": 4,
+      "futureValue": 12,
+      "userId": 1,
+      "apiId": "v1",
+      "id": 2
+    },
+    {
+      "name": "Casa de Playa",
+      "currency": "S/",
+      "amount": 5000,
+      "initialPayment": 1000,
+      "timeFormat": "Años",
+      "time": 1,
+      "interestRateType": "Nominal",
+      "rate": 0.09,
+      "totalGracePeriod": 3,
+      "partialGracePeriod": 3,
+      "futureValue": 6000,
+      "userId": 1,
+      "apiId": "v1",
+      "id": 3
+    },
+    {
+      "name": "preuba 2",
+      "currency": "S/",
+      "amount": 5000,
+      "initialPayment": 1000,
+      "timeFormat": "Años",
+      "time": 1,
+      "interestRateType": "Nominal",
+      "rate": 0.09,
+      "totalGracePeriod": 3,
+      "partialGracePeriod": 3,
+      "futureValue": 6000,
+      "userId": 1,
+      "apiId": "v1",
+      "id": 4
     }
   ]
 }

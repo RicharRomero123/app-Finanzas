@@ -6,12 +6,23 @@ import {PageNotFoundComponent} from "./shared/components/page-not-found/page-not
 import {LoginUserComponent} from "./finanhousing/components/login-user/login-user.component";
 import {PaidPlanComponent} from "./finanhousing/components/paid-plan/paid-plan.component";
 import {PaymentCalculatorComponent} from "./finanhousing/components/payment-calculator/payment-calculator.component";
+import {LayoutComponent} from "./finanhousing/layout/layout.component";
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'accounts/login',
+  },
+  {
+    path: 'accounts/login',
+    component: LoginUserComponent,
+  },
+  {
+    path: 'accounts/register',
+    component: RegisterUserComponent,
+  },
   { path: 'home', component: HomeComponent },
-  { path: 'register', component: RegisterUserComponent },
-  { path: 'login', component: LoginUserComponent },
   { path: 'paid-plan/:id', component: PaidPlanComponent },
   { path: 'payment-calculator', component: PaymentCalculatorComponent },
   { path: '**', component: PageNotFoundComponent }

@@ -30,7 +30,7 @@ export class PaymentCalculatorComponent {
   }
   navigateToHome(){
     this.resetForm();
-    this.router.navigate(['/']);
+    this.router.navigate(['/home']);
   }
   resetForm(){
     this.calculatorForm.resetForm();

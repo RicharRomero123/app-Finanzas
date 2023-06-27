@@ -1,1 +1,9 @@
-<router-outlet></router-outlet>
+<ng-container *ngIf="renderLayout; else routerOutlet">
+  <app-layout>
+    <router-outlet></router-outlet>
+  </app-layout>
+</ng-container>
+
+<ng-template #routerOutlet>
+  <router-outlet></router-outlet>
+</ng-template>

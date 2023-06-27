@@ -1,58 +1,139 @@
-/* Estilos generales */
-.register-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  background-color: #ffffff;
+.bg-container {
+  width: 100%;
+  background: linear-gradient(135deg, #3975e0, #23c489, #5333b7, #d92f8e);
+  display: grid;
+  animation: waterEffect 10s ease-in-out infinite;
 }
 
-h2 {
+@keyframes waterEffect {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 0;
+  justify-self: center;
+  align-self: center;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  max-width: 32rem;
+  margin: 0 1rem;
+  padding: 2rem 0;
+  border-radius:20px;
+  background: rgba(200, 191, 232, 0.29);
+}
+
+mat-card-header {
+  flex-direction: column;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   margin-bottom: 2rem;
 }
 
-.form-group {
+.logo-container img {
+  width: 6rem;
+  border-radius: 9999px;
+}
+
+mat-card-title{
+  font-size: 3rem;
+  line-height: 1;
+  font-family: "Segoe UI",Arial,sans-serif;
+  font-weight: bold;
+  color: #faf8f8;
+}
+
+
+.logo-container mat-card-title {
+  margin-left: 1rem;
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+mat-card-content {
+  margin: 0 2rem;
+}
+
+mat-card-content form {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+mat-card-content form button[type=submit] {
+  background: rgb(47, 153, 47);
+  margin-top: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(53, 53, 53);
+  margin: 1rem 0;
+  padding: .25rem;
+  border-radius: 6px;
+}
+
+.btn-container a {
   width: 100%;
-  margin-bottom: 1.5rem;
 }
-
-.save-button,
-.cancel-button {
-  margin-top: 1.5rem;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
+a {
+  color: white !important;
+  text-decoration: none;
+  padding: .5rem;
+  border-radius: 6px;
 }
-
-.save-button {
-  background-color: #3f51b5;
+button[type="submit"] {
   color: #ffffff;
-  margin-right: 1rem;
+  font-weight: bold;
 }
 
-.cancel-button {
-  background-color: #f5f5f5;
-  color: #333;
+
+.btn-container a.active {
+  background: rgb(47, 153, 47);
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-  .register-container {
-    padding: 1.5rem;
+.btn-container > * + * {
+  margin-left: .25rem;
+}
+
+@media (max-width: 599.98px) {
+  mat-card {
+    padding: 1rem 0;
   }
 
-  .form-group {
-    font-size: 14px;
+  mat-card-content {
+    margin: 1rem;
   }
 
-  .save-button,
-  .cancel-button {
-    font-size: 14px;
-    padding: 0.25rem 0.75rem;
+  .logo-container {
+    flex-direction: column;
+  }
+
+  .logo-container mat-card-title {
+    margin-top: 1rem;
+    margin-left: 0;
+    font-size: 2.5rem;
   }
 }

@@ -1,32 +1,57 @@
-<app-toolbar></app-toolbar>
-<div class="register-container">
-  <h2>Register in Finan-Housing</h2>
-  <form class="register-form" (submit)="onSubmit()" #userForm="ngForm">
-    <mat-form-field class="form-group">
-      <input matInput placeholder="FirstName" name="firstName" required [(ngModel)]="userData.firstName">
-    </mat-form-field>
-    <mat-form-field class="form-group">
-      <input matInput placeholder="LastName" name="lastName" required [(ngModel)]="userData.lastName">
-    </mat-form-field>
-    <mat-form-field class="form-group">
-      <input matInput placeholder="PhotoUrl" name="photoUrl" required [(ngModel)]="userData.photoUrl">
-    </mat-form-field>
-    <mat-form-field class="form-group">
-      <input matInput placeholder="UserName" name="userName" required [(ngModel)]="userData.userName">
-    </mat-form-field>
-    <mat-form-field class="form-group">
-      <input matInput placeholder="Email" name="email" required [(ngModel)]="userData.email">
-    </mat-form-field>
-    <mat-form-field class="form-group">
-      <input matInput placeholder="Password" name="password" required [(ngModel)]="password[0]" type="password">
-    </mat-form-field>
-    <mat-form-field class="form-group">
-      <input matInput placeholder="Confirm Password" name="confirmPassword" required [(ngModel)]="password[1]" type="password">
-    </mat-form-field>
-    <mat-form-field class="form-group">
-      <input matInput placeholder="Number Phone" name="phone" required [(ngModel)]="userData.phone">
-    </mat-form-field>
-    <button type="submit" class="save-button">Save</button>
-    <button class="cancel-button" (click)="navigateToHome()">Cancel</button>
-  </form>
+
+<div class="bg-container">
+  <div class="form-container">
+    <mat-card>
+      <mat-card-header>
+        <div class="logo-container">
+          <img class="logo" src="/assets/logo.png" alt="logo">
+          <mat-card-title>FinanHouse</mat-card-title>
+        </div>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="btn-container">
+          <a mat-flat-button color="basic" routerLink="/accounts/login" routerLinkActive="active" type="button">
+            Log in
+          </a>
+          <a mat-flat-button color="basic" routerLink="/accounts/register" routerLinkActive="active" type="button">
+            Sign up
+          </a>
+        </div>
+
+        <form class="register-form" (submit)="onSubmit()" #userForm="ngForm">
+          <mat-form-field class="form-group">
+            <input matInput placeholder="FirstName" name="firstName" required [(ngModel)]="userData.firstName">
+          </mat-form-field>
+          <mat-form-field class="form-group">
+            <input matInput placeholder="LastName" name="lastName" required [(ngModel)]="userData.lastName">
+          </mat-form-field>
+          <mat-form-field class="form-group">
+            <input matInput placeholder="PhotoUrl" name="photoUrl" required [(ngModel)]="userData.photoUrl">
+          </mat-form-field>
+          <mat-form-field class="form-group">
+            <input matInput placeholder="UserName" name="userName" required [(ngModel)]="userData.userName">
+          </mat-form-field>
+          <mat-form-field class="form-group">
+            <input matInput placeholder="Email" name="email" required [(ngModel)]="userData.email">
+          </mat-form-field>
+          <mat-form-field class="form-group">
+            <input matInput placeholder="Password" name="password" required [(ngModel)]="password[0]" type="password">
+          </mat-form-field>
+          <mat-form-field class="form-group">
+            <input matInput placeholder="Confirm Password" name="confirmPassword" required [(ngModel)]="password[1]" type="password">
+          </mat-form-field>
+          <mat-form-field class="form-group">
+            <input matInput placeholder="Number Phone" name="phone" required [(ngModel)]="userData.phone">
+          </mat-form-field>
+          <button type="submit" class="save-button">Save</button>
+          <button class="cancel-button" (click)="navigateToHome()">Cancel</button>
+        </form>
+
+
+
+
+      </mat-card-content>
+    </mat-card>
+  </div>
 </div>

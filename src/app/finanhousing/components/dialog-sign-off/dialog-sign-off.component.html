@@ -1,0 +1,8 @@
+<mat-dialog-content class="text">
+    <h1 mat-dialog-title style="text-align: center;">Are you sure you want to log out?</h1>
+</mat-dialog-content>
+
+<div mat-dialog-actions style="display: grid; grid-template-columns: 1fr 1fr;">
+    <button mat-raised-button (click)="closeClick()">Cancel</button>
+    <button mat-raised-button mat-dialog-close routerLink="/" style="background-color:#e05454;">Sign Off</button>
+</div>

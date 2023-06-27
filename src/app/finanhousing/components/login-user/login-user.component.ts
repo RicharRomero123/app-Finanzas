@@ -32,6 +32,6 @@ export class LoginUserComponent {
   }
 
   navigateToHome() {
-    this.router.navigate(['/']);
+    this.router.navigate(['/home']);
   }
 }
